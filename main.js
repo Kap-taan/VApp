@@ -91,7 +91,7 @@ let createPeerConnection = async (MemberId) => {
 
     if(!localStream) {
         localStream = await navigator.mediaDevices.getUserMedia({video: true, audio: true});
-        ocument.getElementById('user-1').srcObject = localStream;
+        document.getElementById('user-1').srcObject = localStream;
     }
 
     localStream.getTracks().forEach((track) => {
@@ -100,7 +100,7 @@ let createPeerConnection = async (MemberId) => {
 
     peerConnection.ontrack = (event) => {
         event.streams[0].getTracks().forEach(track => {
-            remoteStream.addTrack(track);
+            remoteStream.addTrack(track, remoteStream);
         })
     }
 

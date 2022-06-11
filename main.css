@@ -62,3 +62,18 @@
 #leave-btn {
     background-color: rgb(255, 80, 80);
 }
+
+@media screen and (max-width: 600px) {
+
+    .smallFrame {
+        height: 8px;
+        width: 120px;
+    }
+
+    .control-container img{
+        height: 20px;
+        width: 20px;
+        
+    }
+
+}
